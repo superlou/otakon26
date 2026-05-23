@@ -62,15 +62,14 @@ function node.render()
 
     gl.clear(1, 1, 1, 1)
 
-    sidebar_bg:draw(1280, 0, 1280 + 640, 946)
-
-    offset(0, 0, function()
+    offset(1280, 0, function()
+        sidebar_bg:draw(0, 0, 640, 946)
         topic_sidebar:draw()
     end)
 
-    main_bg:draw(640, 0, 1920, 964)
+    main_bg:draw(0, 0, 1280, 964)
 
-    offset(640, 0, function()
+    offset(0, 0, function()
         topic_main:draw()
     end)
 
@@ -78,7 +77,7 @@ function node.render()
     ticker:draw()
     draw_image_xywh(ticker_overlay, 0, 964, 1920, 116)
 
-    offset(0, 484, function()
+    offset(1280, 484, function()
         topic_inset:draw()
     end)
 
