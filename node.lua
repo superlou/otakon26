@@ -1,9 +1,9 @@
 gl.setup(1920, 1080)
 require "open_source_patch"
+require "resource_patch"
 -- require("test_runner")()
 local Heading = require "heading"
 require "color_util"
-require "draw_util"
 require "json_util"
 local Ticker = require "ticker"
 local Clock = require "clock"
@@ -72,9 +72,9 @@ function node.render()
         topic_main:draw()
     end)
 
-    draw_image_xywh(ticker_bg, 0, 964, 1920, 116)
+    ticker_bg:draw_xywh(0, 964, 1920, 116)
     ticker:draw()
-    draw_image_xywh(ticker_overlay, 0, 964, 1920, 116)
+    ticker_overlay:draw_xywh(0, 964, 1920, 116)
 
     offset(1280, 484, function()
         topic_inset:draw()

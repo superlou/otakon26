@@ -46,7 +46,7 @@ function FallingBlossums:draw(dt)
 end
 
 function FallingBlossums:draw_blossum(blossum)
-    draw_image_xywh(blossum["image"], blossum.x, blossum.y, blossum.w, blossum.h)
+    blossum["image"]:draw_xywh(blossum.x, blossum.y, blossum.w, blossum.h)
     blossum.x = 100 * math.sin(2 * math.pi * 0.1 * self.t + blossum.phase) + blossum.x0
     blossum.y = blossum.y + math.cos(2 * math.pi * 0.1 * self.t + blossum.phase) ^ 2 + 0.5
 end
