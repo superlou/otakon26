@@ -8,8 +8,8 @@ local sidebar_style = {
         style = "underline",
         font = font_hdg,
         font_size = 48,
-        text_color = "700010",
-        shadow_color = "700010",
+        text_color = "a2931e",
+        shadow_color = "a2931e",
         padding = 50,
     },
     text = {
@@ -34,7 +34,7 @@ local main_style = {
         text_color = "f0f4f5",
         font_size = 48,
         padding = 50,
-        bg_color = "700010",
+        bg_color = "7675cb",
         shadow_color = "f0f4f5",
     },
     text = {

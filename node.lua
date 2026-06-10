@@ -26,7 +26,6 @@ local ticker_height = 116
 local ticker = Ticker:new(0, HEIGHT - ticker_height - 2, WIDTH, ticker_height - 2)
 local clock = Clock:new(200, 96)
 local service_indicator = ServiceIndicator()
-local falling_blossums = FallingBlossums(0, 0, WIDTH, HEIGHT)
 
 local style = require "style"
 local topic_main = TopicPlayer(1280, 964, style["main_style"])
@@ -89,6 +88,4 @@ function node.render()
     offset(10, 978, function()
         service_indicator:draw()
     end)
-
-    falling_blossums:draw(dt)
 end
