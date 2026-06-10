@@ -17,7 +17,7 @@ local sidebar_style = {
         font_bold = font_body_bold,
         color = "f0f4f5",
     },
-    padding = { 40, 50, 8, 50 },
+    padding = { 40, 50, 250, 50 },
     session_list = {
         item_bg_img = create_color_resource_hex("700010", 1.0),
         compact = true

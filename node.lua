@@ -29,9 +29,9 @@ local service_indicator = ServiceIndicator()
 local falling_blossums = FallingBlossums(0, 0, WIDTH, HEIGHT)
 
 local style = require "style"
-local topic_sidebar = TopicPlayer(640, 484, style["sidebar_style"])
 local topic_main = TopicPlayer(1280, 964, style["main_style"])
-local topic_inset = TopicPlayer(640, 480, style["inset_style"])
+local topic_sidebar = TopicPlayer(640, 964, style["sidebar_style"])
+local topic_inset = TopicPlayer(400, 300, style["inset_style"])
 
 util.data_mapper {
     ["clock/update"] = function(data)
@@ -76,7 +76,9 @@ function node.render()
     ticker:draw()
     ticker_overlay:draw_xywh(0, 964, 1920, 116)
 
-    offset(1280, 484, function()
+    get_guidebook:draw_xywh(1287, 740, 190, 209)
+
+    offset(1444 + 56, 729 + 11, function()
         topic_inset:draw()
     end)
 
