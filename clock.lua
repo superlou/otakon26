@@ -7,7 +7,7 @@ local font = resource.load_font "font_Poppins-Regular.ttf"
 local font_bold = resource.load_font "font_Poppins-Bold.ttf"
 local debug_bg = create_color_resource_hex("ffffff", 0.4)
 local date_bg = resource.load_image("img_date_bg.png")
-local date_color = { hex2rgb("#d7383d") }
+local date_color = { hex2rgb("#ffd36f") }
 
 function Clock:initialize(w, h, show_rect)
     self.w, self.h = w, h
@@ -31,7 +31,7 @@ end
 function Clock:draw()
     local w, h = self.w, self.h
     local text_h = 43
-    local sub_h = 22
+    local sub_h = 18
 
     if self.show_rect then
         debug_bg:draw(0, 0, w, h)
@@ -58,7 +58,7 @@ function Clock:draw()
 
     local date_r, date_g, date_b = unpack(date_color)
 
-    font:write(x_anchor - date_w - 18, y_anchor + 3,
+    font:write(x_anchor - date_w - 14, y_anchor + 3,
         self.date, sub_h,
         date_r, date_g, date_b, 1)
 end

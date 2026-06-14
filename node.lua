@@ -71,9 +71,9 @@ function node.render()
         topic_main:draw()
     end)
 
-    ticker_bg:draw_xywh(0, 964, 1920, 116)
+    ticker_bg:draw_xywh(0, 945, 1920, 135)
     ticker:draw()
-    ticker_overlay:draw_xywh(0, 964, 1920, 116)
+    ticker_overlay:draw_xywh(0, 945, 1920, 135)
 
     get_guidebook:draw_xywh(1287, 740, 190, 209)
 
@@ -81,7 +81,7 @@ function node.render()
         topic_inset:draw()
     end)
 
-    offset(1710, 972, function()
+    offset(15, 964, function()
         clock:draw()
     end)
 

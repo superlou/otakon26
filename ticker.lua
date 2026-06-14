@@ -7,7 +7,7 @@ local TickerMsg = class("TickerMsg")
 local font = resource.load_font "font_QuattrocentoSans-Regular.ttf"
 local separator = resource.load_image("img_separator.png")
 local msg_y_offset = 32
-local text_color = { hex2rgb("#481e14") }
+local text_color = { hex2rgb("#e2e2ff") }
 
 function Ticker:initialize()
 end
