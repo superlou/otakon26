@@ -19,11 +19,11 @@ local sidebar_style = {
     },
     padding = { 40, 50, 250, 50 },
     session_list = {
-        item_bg_img = create_color_resource_hex("700010", 1.0),
+        item_bg_img = create_color_resource_hex("32303a", 1.0),
         compact = true
     },
     session_brief = {
-        item_bg_img = create_color_resource_hex("700010", 1.0)
+        item_bg_img = create_color_resource_hex("32303a", 1.0)
     }
 }
 

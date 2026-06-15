@@ -21,9 +21,10 @@ local inset_overlay = resource.load_image "img_inset_overlay.png"
 local get_guidebook = resource.load_image "img_get_guidebook.png"
 local ticker_bg = resource.load_image "img_ticker_bg.png"
 local ticker_overlay = resource.load_image "img_ticker_overlay.png"
+local inset_inner_shadow = resource.load_image "img_inset_inner_shadow.png"
 
 local ticker_height = 116
-local ticker = Ticker:new(0, HEIGHT - ticker_height - 2, WIDTH, ticker_height - 2)
+local ticker = Ticker:new(0, HEIGHT - ticker_height, WIDTH, ticker_height - 2)
 local clock = Clock:new(200, 96)
 local service_indicator = ServiceIndicator()
 
@@ -73,13 +74,12 @@ function node.render()
 
     ticker_bg:draw_xywh(0, 945, 1920, 135)
     ticker:draw()
-    ticker_overlay:draw_xywh(0, 945, 1920, 135)
+    ticker_overlay:draw_xywh(0, 745, 1920, 336)
 
-    get_guidebook:draw_xywh(1287, 740, 190, 209)
-
-    offset(1444 + 56, 729 + 11, function()
+    offset(1497, 764, function()
         topic_inset:draw()
     end)
+    inset_inner_shadow:draw_xywh(1497, 764, 400, 300)
 
     offset(15, 964, function()
         clock:draw()
