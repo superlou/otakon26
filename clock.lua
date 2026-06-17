@@ -30,7 +30,7 @@ end
 
 function Clock:draw()
     local w, h = self.w, self.h
-    local text_h = 43
+    local text_h = 38
     local sub_h = 18
 
     if self.show_rect then
@@ -50,7 +50,7 @@ function Clock:draw()
         self.hh_mm, text_h,
         1, 1, 1, 1)
 
-    font_bold:write(x_anchor + 4, y_anchor - text_h + 2,
+    font_bold:write(x_anchor + 2, y_anchor - text_h + 2,
         self.am_pm, sub_h,
         1, 1, 1, 1)
 
